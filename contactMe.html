@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        /* Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contact-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <form id="contactForm">
+            <input type="text" id="fullName" class="field" placeholder="Your Name" required>
+            <input type="email" id="email" class="field" placeholder="Your Email" required>
+            <textarea id="message" class="field" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="thankYouMessage" class="hidden">
+            <h2>Thank You!</h2>
+            <p>Your message has been received.</p>
+            <h3>Your Details:</h3>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page refresh
+
+            // Get user input values
+            const fullName = document.getElementById("fullName").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Display the submitted details
+            document.getElementById("displayName").textContent = fullName;
+            document.getElementById("displayEmail").textContent = email;
+            document.getElementById("displayMessage").textContent = message;
+
+            // Show the thank you message
+            document.getElementById("thankYouMessage").classList.remove("hidden");
+
+            // Clear the form fields after submission
+            document.getElementById("contactForm").reset();
+        });
+    </script>
+</body>
+</html>

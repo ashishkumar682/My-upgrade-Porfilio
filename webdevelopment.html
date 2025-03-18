@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Overview</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: rgb(246, 148, 148);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), -10px -10px 20px rgba(255, 255, 255, 0.5);
+            max-width: 800px;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 90vh;
+            transform: perspective(1000px) rotateY(5deg);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.05);
+        }
+        h1, h4, h5 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Web Development: A Comprehensive Overview</h1>
+        <p>Web development refers to the process of building, designing, and maintaining websites and web applications...</p>
+        
+        <h4>1. Types of Web Development</h4>
+        <h5>A. Front-End Development (Client-Side)</h5>
+        <p>Front-end development focuses on the user interface (UI) and user experience (UX)...</p>
+        
+        <h5>B. Back-End Development (Server-Side)</h5>
+        <p>Back-end development deals with the server, database, and application logic...</p>
+        
+        <h5>C. Full-Stack Development</h5>
+        <p>Full-stack developers handle both front-end and back-end development...</p>
+
+        <h5>2. Web Development Process</h5>
+        <p>Step 1: Planning & Research...</p>
+        <p>Step 2: Design & Development...</p>
+        <p>Step 3: Testing & Debugging...</p>
+        <p>Step 4: Deployment & Maintenance...</p>
+
+        <h5>3. Importance of Web Development</h5>
+        <p>Enhances Business Presence...</p>
+        <p>Improves User Experience...</p>
+        <p>Ensures Security...</p>
+
+        <h5>4. Future Trends in Web Development</h5>
+        <p>Progressive Web Apps (PWAs)...</p>
+        <p>Artificial Intelligence (AI)...</p>
+        <p>Web3 & Blockchain...</p>
+    </div>
+</body>
+</html>
